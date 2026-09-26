@@ -1,24 +1,29 @@
+import AddButton from '@/components/AddButton';
+import HabitList from '@/components/HabitList';
+import Stats from '@/components/Stats';
+import StreakCard from '@/components/StreakCard';
+import Week from '@/components/Week';
 import { StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Header from '../components/Header';
+import { colors } from '../constants/colors';
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <View style={styles.box1} />
-      <View style={styles.box2} />
-      <View style={styles.box3} />
-    </View>
+    <SafeAreaView style={styles.screen}>
+      <View style={styles.content}>
+        <Header />
+        <StreakCard />
+        <Stats />
+        <Week />
+        <HabitList />
+        <AddButton />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 60,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-  },
-  box1: { width: 80, height: 80, backgroundColor: 'tomato' },
-  box2: { width: 80, height: 80, backgroundColor: 'gold' },
-  box3: { width: 80, height: 80, backgroundColor: 'dodgerblue' },
+  screen: { flex: 1, backgroundColor: colors.background },
+  content: { flex: 1, padding: 20, gap: 16 },
 });
