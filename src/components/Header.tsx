@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '../constants/colors';
+import { theme } from '../constants/theme';
 
 export default function Header() {
   return (
@@ -17,15 +17,15 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  greeting: { fontSize: 24, fontWeight: 'bold', color: colors.text },
-  date: { fontSize: 14, color: colors.textMuted },
+  greeting: { fontSize: theme.text.title, fontWeight: 'bold', color: theme.colors.text },
+  date: { fontSize: theme.text.small, color: theme.colors.textMuted },
   avatar: {
     width: 48,
     height: 48,
-    borderRadius: 24,
-    backgroundColor: colors.primarySoft,
+    borderRadius: theme.radius.full,
+    backgroundColor: theme.colors.primarySoft,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  avatarText: { fontSize: 16, fontWeight: 'bold', color: colors.primary },
+  avatarText: { fontSize: theme.text.body, fontWeight: 'bold', color: theme.colors.primary },
 });

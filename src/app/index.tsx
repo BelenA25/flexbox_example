@@ -1,4 +1,3 @@
-import AddButton from '@/components/AddButton';
 import HabitList from '@/components/HabitList';
 import Stats from '@/components/Stats';
 import StreakCard from '@/components/StreakCard';
@@ -17,7 +16,6 @@ export default function Index() {
         <Stats />
         <Week />
         <HabitList />
-        <AddButton />
       </View>
     </SafeAreaView>
   );

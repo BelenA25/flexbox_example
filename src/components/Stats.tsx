@@ -1,3 +1,4 @@
+import { theme } from '@/constants/theme';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '../constants/colors';
 
@@ -24,11 +25,11 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', gap: 12 },
   stat: {
     flex: 1,
-    backgroundColor: colors.card,
+    backgroundColor: theme.colors.card,
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
   },
-  number: { fontSize: 20, fontWeight: 'bold', color: colors.text },
+  number: { fontSize: theme.spacing.xl, fontWeight: 'bold', color: colors.text },
   label: { fontSize: 12, color: colors.textMuted },
 });

@@ -1,3 +1,4 @@
+import { theme } from '@/constants/theme';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from '../constants/colors';
@@ -15,8 +16,8 @@ export default function StreakCard() {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.card,
-    borderRadius: 20,
-    paddingVertical: 20,
+    borderRadius: theme.spacing.xl,
+    paddingVertical: theme.spacing.xl,
     alignItems: 'center',
     gap: 4,
   },
